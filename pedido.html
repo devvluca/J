@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 1 Mês</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fundo suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .panel {
+            background-color: white;
+            width: 500px;
+            height: auto;
+            border-radius: 20px;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .panel img {
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .btn-custom {
+            width: 120px;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #c82333;
+        }
+        #no-button {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="panel">
+        <h1>Feliz 1 Mês de Namoro, gatinha <3</h1>
+        <img src="/coração.webp" alt="Gif fofo de coração">
+        <h2>Te amo</h2>
+        <a href="/uhul.webp" class="btn btn-custom">Também te amo</a>
+        <button id="no-button" class="btn btn-custom" onmouseover="fuja()">Eu sei</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("no-button");
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+</html>
